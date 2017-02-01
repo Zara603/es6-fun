@@ -27,9 +27,15 @@
   </style>
 </head>
 <body>
-  <h2 class="jump">SPREADS!</h2>
+  <h2 class="jump">Unimaginatively!</h2>
 
 <script>
+  const heading = document.querySelector('.jump');
+  heading.innerHTML= breakToSpan(heading.textContent);
+
+  function breakToSpan(word) {
+    return [...word].map(letter => `<span>${letter}</span>`).join('');
+  } 
   
 </script>
 </body>
